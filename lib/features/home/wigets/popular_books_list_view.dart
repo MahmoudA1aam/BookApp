@@ -1,3 +1,4 @@
+import 'package:book_app/core/routing/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,8 +15,12 @@ class PopularBooksListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 5,
         itemBuilder: (context, index) => Padding(
-          padding:  EdgeInsets.only(right: 8.w),
-          child: const ItemOfPopularBooks(),
+          padding: EdgeInsets.only(right: 8.w),
+          child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, RouteNames.detailsBookScreen);
+              },
+              child: const ItemOfPopularBooks()),
         ),
       ),
     );
@@ -42,7 +47,7 @@ class ItemOfPopularBooks extends StatelessWidget {
                   ))),
         ),
         Padding(
-          padding:  EdgeInsets.only(right: 8.w,bottom: 8.h),
+          padding: EdgeInsets.only(right: 8.w, bottom: 8.h),
           child: CircleAvatar(
             backgroundColor: Colors.grey.withOpacity(0.3),
             radius: 20,
