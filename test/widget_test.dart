@@ -5,7 +5,7 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:book_app/book_main.dart';
+import 'package:book_app/book_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -14,7 +14,7 @@ import 'package:book_app/main.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const BookMain());
+    await tester.pumpWidget(const BookApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
