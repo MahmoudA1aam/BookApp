@@ -66,7 +66,7 @@ class _CustomSearchTextFiledState extends State<CustomSearchTextFiled> {
                                 onPressed: () {
                                   setState(() {
                                     searchController.clear();
-                                    textEmpty=true;
+                                    textEmpty = true;
                                   });
                                 },
                                 icon: const Icon(
